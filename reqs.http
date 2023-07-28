@@ -1,1 +1,62 @@
-GET https://deyvid98-refactored-waffle-4j7gr9qqr967cj4q-8080.preview.app.github.dev
+@server = https://deyvid98-refactored-waffle-4j7gr9qqr967cj4q-8080.preview.app.github.dev
+
+
+####
+GET {{server}}
+####
+GET {{server}}/curso
+####
+POST {{server}}/curso
+Content-Type: application/json
+
+{"Nombre":"Algoritmos", "Creditos":3}
+####
+GET {{server}}/curso/3
+####
+PATCH {{server}}/curso/1
+Content-Type: application/json
+
+{"nombre":"Algoritmos", "creditos":3}
+
+
+####
+POST {{server}}/curso
+Content-Type: application/json
+
+{"Nombre":"movil", "Creditos":4}
+####
+PATCH {{server}}/curso/2
+Content-Type: application/json
+
+{"nombre":"movil", "creditos":4}
+
+################
+####
+POST {{server}}/curso
+Content-Type: application/json
+
+{"nombre":"inteligencia artificial", "creditos":5}
+####
+
+################
+####
+POST {{server}}/curso
+Content-Type: application/json
+
+{"nombre":"servicios web", "creditos":5}
+####
+
+################3
+GET {{server}}/curso?size=4&page=0
+
+
+#########
+GET {{server}}/carrera
+#####
+POST {{server}}/carrera
+Content-Type: application/json
+
+{"nombre": "Marketing"}
+
+#####
+GET {{server}}/carrera/2/curso
